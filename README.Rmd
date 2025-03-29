@@ -95,19 +95,23 @@ station_forecast(station_id = "KNYC") %>%
   head()
 
 # We can easily put this result into a GT table for easy viewing
+```
 
+```{r gtexample, message=FALSE, warning=FALSE, results='hide'}
 library(gt)
 
-station_forecast(station_id = "KNYC") %>% 
+my_table <- station_forecast(station_id = "KNYC") %>% 
   as.data.frame() %>% 
   select(time, wind_dir, wind_speed, skies) %>% 
   filter(dplyr::row_number() == 1 | skies != lag(skies)) %>%  #Keep only observations where the first row is 0 and the skies change
   rename_with(~ gsub("_", " ", .) %>% stringr::str_to_title()) %>% #switch from snake_case to Title Case
   gt::gt() %>% 
   gt::tab_header(title = paste0("Skies forecast for KNYC, the Week of ", Sys.Date())) %>% 
-  gt::opt_css(css = "") %>% 
-  print()
+  gt::opt_css(css = "")
+
+gt::gtsave(my_table, "my_table.png")
 ```
+![Skies forecast table](my_table.png)
 
 ## Finding NWS ASOS/AWOS Stations Near a Point
 
