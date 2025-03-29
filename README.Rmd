@@ -87,7 +87,7 @@ Rather than using a latitude/longitude point, we can use an ASOS or AWOS station
 
 Lets get a list of the forecast wind speed, wind direction, and skies, by time.
 
-```{r example3, warning=FALSE, results='asis'}
+```{r example3, message=FALSE, paged.print=FALSE, warning=FALSE, results='asis'}
 
 station_forecast(station_id = "KNYC") %>% 
   as.data.frame() %>% 
