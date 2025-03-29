@@ -23,5 +23,7 @@ Fetch the weather forecast for a lat/lon point's corresponding forecast zone, de
 }
 \examples{
 # converts data back to a dataframe and filters for where probability of rain is greater than 10\%
+\donttest{
 point_forecast(lat = 40.71427000, lon = -74.00597000, dir_numeric = TRUE)
+}
 }

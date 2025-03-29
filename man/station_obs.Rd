@@ -21,7 +21,7 @@ Fetch station observations for an ASOS or AWOS ID
 }
 \examples{
 # Gets the highest observed temperatures in Boston
-\dontrun{
+\donttest{
 station_obs("KBOS") \%>\% data.frame() \%>\%
   dplyr::select(-geometry) \%>\%
   dplyr::filter(temp == max(.$temp))

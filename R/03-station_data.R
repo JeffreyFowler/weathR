@@ -67,7 +67,10 @@ station_coords <- function(station_id){
 #'
 #' @examples
 #' # plots the ASOS station for KDEN using tmap
-#' \dontrun{
+#' \donttest{
+#' install.packages("tmap")
+#' library(tmap)
+#'
 #' tmap_mode("view")
 #' station_point("KDEN") %>% tm_shape() + tm_dots(size = .1)
 #' }
@@ -93,7 +96,7 @@ station_point <- function(station_id){
 #'
 #' @examples
 #' # Converts the current time into the timezone for the Denver International Airport ASOS station.
-#' donttest{
+#' \donttest{
 #' Sys.time() %>% lubridate::force_tz(tzone = station_tz("KDEN"))
 #' }
 station_tz <- function(station_id){

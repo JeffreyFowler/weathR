@@ -23,4 +23,5 @@ Get tomorrows forecast for a given station_id
 }
 \examples{
 station_tomorrow("KBOS")
+
 }

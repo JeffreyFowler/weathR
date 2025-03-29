@@ -19,7 +19,7 @@ Fetch stations near a lat/lon point, and within that lat/lon's forecast zone
 }
 \examples{
 # Plot the a station with given points and the nearby stations in a tmap
-\dontrun{
+\donttest{
 stations_near(lat = 33, lon = -80) \%>\%
   tm_shape() +
   tm_dots(size = .1) +

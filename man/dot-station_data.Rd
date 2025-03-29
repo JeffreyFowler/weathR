@@ -16,5 +16,7 @@ Returns all station data provided for the NWS
 Fetch station metadata data as a nested list
 }
 \examples{
+\donttest{
 .station_data("KDEN")
+}
 }

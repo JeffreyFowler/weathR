@@ -18,5 +18,7 @@ A sf point object with NWS metadata
 Gets a subset of NWS point metadata for a given lat/lon
 }
 \examples{
+\donttest{
 point_data(lat = 40.71427000, lon = -74.00597000)
+}
 }

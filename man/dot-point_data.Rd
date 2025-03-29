@@ -18,5 +18,7 @@ A nested list containing NWS point data
 Get the unprocessed http response for point data corresponding to a given latitude/longitude from the NWS
 }
 \examples{
+\donttest{
 .point_data(lat = 40.71427000, lon = -74.00597000) \%>\% data.frame()
+}
 }

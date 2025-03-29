@@ -19,5 +19,7 @@ Fetch the nearest ASOS station to a point that is inside the same forecast regio
 }
 \examples{
 # Gets the observation data as an sf associated with a point
+\donttest{
 point_station(lat = 42, lon = -80) \%>\% station_obs() \%>\% data.frame()
+}
 }

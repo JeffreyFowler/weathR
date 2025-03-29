@@ -20,7 +20,7 @@ An sf with coordinates for the AWOS/ASOS station, time, and forecast values.
 Fetch the NWS hourly forecast at a given AWOS or ASOS station identifier.
 }
 \examples{
-\dontrun{
+\donttest{
 station_forecast("KBOS") \%>\% data.frame() \%>\% dplyr::select(-geometry)
 }
 }

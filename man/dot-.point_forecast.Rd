@@ -22,5 +22,7 @@ A list containing point forecast sf and the timezone
 Get the point forecast AND the timezone for the point, all in one function call.
 }
 \examples{
+\donttest{
 ..point_forecast(33, -80)
+}
 }

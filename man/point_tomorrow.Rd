@@ -25,5 +25,7 @@ Fetch the weather forecast for a lat/lon point tomorrow, denominated in the give
 }
 \examples{
 # Get the maximum temperature in tomorrows forecast
+\donttest{
 point_tomorrow(lat = 33, lon = -80)
+}
 }

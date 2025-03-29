@@ -23,7 +23,12 @@ Get the weather observed thus far today at the nearest ASOS station to a point w
 }
 \examples{
 # Produce a GT summary of the weather thus far for a given lat/lon
-\dontrun{
+\donttest{
+install.packages("gt")
+library(gt)
+install.packages("snakecase")
+library(snakecase)
+
 point_today(lat = 33, lon = -80) \%>\%
 as.data.frame() \%>\%
  dplyr::mutate(time = as.POSIXct(time) \%>\% format("\%H:\%M")) \%>\%
