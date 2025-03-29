@@ -7,11 +7,11 @@
 station_today(station_id, timezone = -1, dir_numeric = FALSE)
 }
 \arguments{
-\item{station_id}{The ASOS or AWOS station ID (Ex: KDEN, KNYC, etc.)}
+\item{station_id}{The station identifier (ex: KDEN, KNYC, etc).}
 
-\item{timezone}{The timezone to denominate results in. Must be one of OlsonNames().}
+\item{timezone}{The nominal timezone for the forecast. One of \code{OlsonNames()} or \code{-1} for local time. Defaults to \code{-1}.}
 
-\item{dir_numeric}{Logical; Should the wind direction be returned as a numeric, or a character?}
+\item{dir_numeric}{\code{TRUE} for numeric directions, \code{FALSE} for character directions; defaults to \code{FALSE}.}
 }
 \value{
 A sf object with timestamps and weather values

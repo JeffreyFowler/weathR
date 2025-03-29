@@ -7,24 +7,23 @@
 point_tomorrow(lat, lon, timezone = -1, dir_numeric = FALSE, short = TRUE)
 }
 \arguments{
-\item{lat}{Latitude}
+\item{lat}{Latitude.}
 
-\item{lon}{Longitude}
+\item{lon}{Longitude.}
 
-\item{timezone}{A timezone to denominate timestamps in (must be one of the Olson Names)}
+\item{timezone}{The nominal timezone for the forecast. One of \code{OlsonNames()} or \code{-1} for local time. Defaults to \code{-1}.}
 
-\item{dir_numeric}{TRUE/FALSE; Should the wind direction be numeric, or character?}
+\item{dir_numeric}{\code{TRUE} for numeric directions, \code{FALSE} for character directions; defaults to \code{FALSE}.}
 
-\item{short}{TRUE/FALSE; Should the forecast be for only tomorrow, or both the remainder of today and tomorrow?}
+\item{short}{\code{TRUE} for only tomorrow, \code{FALSE} for today and tomorrow; defaults to \code{TRUE}.}
 }
 \value{
-Returns an sf with forecast values
+Simple features object with forecast meteorological values.
 }
 \description{
 Fetch the weather forecast for a lat/lon point tomorrow, denominated in the given timezone.
 }
 \examples{
-# Get the maximum temperature in tomorrows forecast
 \donttest{
 point_tomorrow(lat = 33, lon = -80)
 }

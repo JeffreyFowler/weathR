@@ -7,16 +7,16 @@
 point_today(lat, lon, timezone = -1, dir_numeric = FALSE)
 }
 \arguments{
-\item{lat}{Latitude of a point}
+\item{lat}{Latitude.}
 
-\item{lon}{Longitude of a point}
+\item{lon}{Longitude.}
 
-\item{timezone}{Timezone to denominate results in; -1 for local time}
+\item{timezone}{The nominal timezone for the forecast. One of \code{OlsonNames()} or \code{-1} for local time. Defaults to \code{-1}.}
 
-\item{dir_numeric}{Logical; TRUE for numeric wind directions, FALSE for character wind directions}
+\item{dir_numeric}{\code{TRUE} for numeric directions, \code{FALSE} for character directions; defaults to \code{FALSE}.}
 }
 \value{
-A sf object with weather observations for today
+Simple features point corresponding to the given station identifier with recent meteorological forecast values for today.
 }
 \description{
 Get the weather observed thus far today at the nearest ASOS station to a point which is in the same forecast zone as the given point.

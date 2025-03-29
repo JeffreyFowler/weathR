@@ -2,22 +2,22 @@
 % Please edit documentation in R/05-station_forecast.R
 \name{station_forecast}
 \alias{station_forecast}
-\title{Fetch the NWS hourly forecast at a given AWOS or ASOS station identifier.}
+\title{Station Forecast}
 \usage{
 station_forecast(station_id, timezone = -1, dir_numeric = FALSE)
 }
 \arguments{
-\item{station_id}{The station identifier for which to get the observations}
+\item{station_id}{Station identifier (ex: KDEN, KBOS, KNYC, etc).}
 
-\item{timezone}{The timezone to denominate timestamps in. Defaults to local time.}
+\item{timezone}{The nominal timezone for the forecast. One of \code{OlsonNames()} or \code{-1} for local time. Defaults to \code{-1}.}
 
-\item{dir_numeric}{Should the wind direction be returned as a numeric, or a character? TRUE uses numeric wind directions, FALSE uses characters.}
+\item{dir_numeric}{\code{TRUE} for numeric directions, \code{FALSE} for character directions; defaults to \code{FALSE}.}
 }
 \value{
-An sf with coordinates for the AWOS/ASOS station, time, and forecast values.
+Simple features point corresponding to the given station identifier with recent meteorological forecast values.
 }
 \description{
-Fetch the NWS hourly forecast at a given AWOS or ASOS station identifier.
+Station Forecast
 }
 \examples{
 \donttest{

@@ -2,25 +2,24 @@
 % Please edit documentation in R/04-station_observations.R
 \name{station_obs}
 \alias{station_obs}
-\title{Fetch station observations for an ASOS or AWOS ID}
+\title{Station Observations}
 \usage{
 station_obs(station_id, timezone = -1, dir_numeric = FALSE)
 }
 \arguments{
-\item{station_id}{The AWOS or ASOS station ID}
+\item{station_id}{The station identifier (ex: KDEN, KBOS, KNYC, etc).}
 
-\item{timezone}{The timezone to denominate timestamps in. Defaults to local time}
+\item{timezone}{The nominal timezone for the forecast. One of \code{OlsonNames()} or \code{-1} for local time. Defaults to \code{-1}.}
 
-\item{dir_numeric}{Should the wind direction be returned as a numeric, or a character? TRUE uses numeric wind directions, FALSE uses characters}
+\item{dir_numeric}{\code{TRUE} for numeric directions, \code{FALSE} for character directions; defaults to \code{FALSE}.}
 }
 \value{
-An sf with coordinates for the AWOS/ASOS station, time, and observed values.
+Simple features point corresponding to the given station identifier with recent meteorological observations.
 }
 \description{
-Fetch station observations for an ASOS or AWOS ID
+Station Observations
 }
 \examples{
-# Gets the highest observed temperatures in Boston
 \donttest{
 station_obs("KBOS") \%>\% data.frame() \%>\%
   dplyr::select(-geometry) \%>\%

@@ -7,16 +7,16 @@
 station_tomorrow(station_id, timezone = -1, dir_numeric = FALSE, short = TRUE)
 }
 \arguments{
-\item{station_id}{An ASOS or AWOS station identifier}
+\item{station_id}{Station identifier (ex: KDEN, KBOS, KNYC, etc).}
 
-\item{timezone}{A timezone to denominate the forecast in}
+\item{timezone}{The nominal timezone for the forecast. One of \code{OlsonNames()} or \code{-1} for local time. Defaults to \code{-1}.}
 
-\item{dir_numeric}{logical; if TRUE return the wind direction as numeric. If FALSE return the wind direction as a character}
+\item{dir_numeric}{\code{TRUE} for numeric directions, \code{FALSE} for character directions; defaults to \code{FALSE}.}
 
-\item{short}{logical; if TRUE return the forecast for only tomorrow. If FALSE return the forecast for the remainder of today and tomorrow.}
+\item{short}{\code{TRUE} for only tomorrow, \code{FALSE} for today and tomorrow; defaults to \code{TRUE}.}
 }
 \value{
-Returns a sf with coordinates for the AWOS/ASOS station, time, and forecast values
+Simple features point corresponding to the given station identifier with recent meteorological forecast values.
 }
 \description{
 Get tomorrows forecast for a given station_id

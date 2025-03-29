@@ -2,24 +2,24 @@
 % Please edit documentation in R/02-point_forecast.R
 \name{..point_forecast}
 \alias{..point_forecast}
-\title{Get the point forecast AND the timezone for the point, all in one function call.}
+\title{Point Forecast Data and Local Timezone}
 \usage{
 ..point_forecast(lat, lon, timezone = -1, dir_numeric = FALSE)
 }
 \arguments{
-\item{lat}{Latitude}
+\item{lat}{Latitude.}
 
-\item{lon}{Longitude}
+\item{lon}{Longitude.}
 
-\item{timezone}{Timezone, -1 for local time}
+\item{timezone}{The nominal timezone for the forecast. One of \code{OlsonNames()} or \code{-1} for local time. Defaults to \code{-1}.}
 
-\item{dir_numeric}{Logical; TRUE for numeric directions, FALSE for character directions}
+\item{dir_numeric}{\code{TRUE} for numeric directions, \code{FALSE} for character directions; defaults to \code{FALSE}.}
 }
 \value{
-A list containing point forecast sf and the timezone
+A list containing point forecast sf and the timezone.
 }
 \description{
-Get the point forecast AND the timezone for the point, all in one function call.
+Point Forecast Data and Local Timezone
 }
 \examples{
 \donttest{

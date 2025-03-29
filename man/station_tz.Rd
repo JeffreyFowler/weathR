@@ -7,16 +7,15 @@
 station_tz(station_id)
 }
 \arguments{
-\item{station_id}{The ASOS or AWOS station ID (ex: KDEN, KBOS, KNYC, etc)}
+\item{station_id}{The station identifier (ex: KDEN, KBOS, KNYC, etc).}
 }
 \value{
-Returns a string corresponding to a timezone from OlsonNames()
+A character corresponding to a timezone from \code{OlsonNames()}.
 }
 \description{
 Fetch station timezone
 }
 \examples{
-# Converts the current time into the timezone for the Denver International Airport ASOS station.
 \donttest{
 Sys.time() \%>\% lubridate::force_tz(tzone = station_tz("KDEN"))
 }

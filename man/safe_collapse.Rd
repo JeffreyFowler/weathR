@@ -2,21 +2,21 @@
 % Please edit documentation in R/08-active_alerts.R
 \name{safe_collapse}
 \alias{safe_collapse}
-\title{Safe collapse}
+\title{Safe Collapse}
 \usage{
 safe_collapse(x)
 }
 \arguments{
-\item{x}{A list to collapse}
+\item{x}{A list to collapse.}
 }
 \value{
-A comma delimited version of your input list, or NA when the input list is blank
+A comma delimited version of your input list, or NA when the input list is blank.
 }
 \description{
-Safe collapse
+Safe Collapse
 }
 \note{
-This is a helper function that is used to collapse a list into a string, and is used in building the active warnings dataset
+This is a helper function that is used to collapse a list into a string, and is used in building the active warnings dataset.
 }
 \examples{
 safe_collapse(c("This is one", "And this is another one"))

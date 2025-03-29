@@ -1,11 +1,11 @@
 #=========================#
 #   WINDDIR AS INTEGER    #
 #=========================#
-#' Convert wind direction from a character to an integer
+#' Convert Wind Direction from a Character to an Integer
 #'
-#' @param direction The direction as a string (N, NNE, NE, ENE, E, ESE, etc.)
+#' @param direction A direction, as a string (N, NNE, NE, ENE, E, ESE, etc).
 #'
-#' @return An integer representing degrees clockwise from north
+#' @return An integer representing degrees clockwise from north.
 #' @export
 #'
 #' @importFrom magrittr `%>%`
@@ -43,11 +43,11 @@ dir_as_integer <- function(direction){
 #=================================#
 #         WINDDIR AS CHAR         #
 #=================================#
-#' Convert wind direction from a numeric to a character
+#' Convert Wind Direction from Numeric to Character
 #'
-#' @param direction A string corresponding to direction ("N", "NNE", etc.)
+#' @param direction Numeric degrees clockwise from north, (0 = N, 45 = NE, etc).
 #'
-#' @return Returns a character (N, NNE, NE, etc.)
+#' @return Character direction (N, NNE, NE, etc).
 #' @export
 #'
 #' @examples dir_as_char(330)

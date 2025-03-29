@@ -1,16 +1,16 @@
 #===============================#
 #         SAFE COLLAPSE         #
 #===============================#
-#' Safe collapse
+#' Safe Collapse
 #'
-#' @param x A list to collapse
+#' @param x A list to collapse.
 #'
-#' @return A comma delimited version of your input list, or NA when the input list is blank
+#' @return A comma delimited version of your input list, or NA when the input list is blank.
 #' @export
 #'
 #' @examples safe_collapse(c("This is one", "And this is another one"))
 #' @note
-#' This is a helper function that is used to collapse a list into a string, and is used in building the active warnings dataset
+#' This is a helper function that is used to collapse a list into a string, and is used in building the active warnings dataset.
 safe_collapse <- function(x){
   if(is.null(x) || length(x) == 0){NA_character_}else{paste0(x, collapse = ", ")}
 }
@@ -18,9 +18,9 @@ safe_collapse <- function(x){
 #=================================#
 #         ACTIVE WARNINGS         #
 #=================================#
-#' Get active NWS alerts
+#' National Weather Service Alerts
 #'
-#' @return A dataframe containing various columns identifying and describing alerts
+#' @return Dataframe containing various columns identifying and describing alerts.
 #' @export
 #'
 #' @importFrom dplyr relocate bind_rows

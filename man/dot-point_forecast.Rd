@@ -2,20 +2,20 @@
 % Please edit documentation in R/02-point_forecast.R
 \name{.point_forecast}
 \alias{.point_forecast}
-\title{Get point forecast data as a raw nested json list}
+\title{Raw JSON Point Forecast Data}
 \usage{
 .point_forecast(lat, lon)
 }
 \arguments{
-\item{lat}{Latitude}
+\item{lat}{Latitude.}
 
-\item{lon}{Longitude}
+\item{lon}{Longitude.}
 }
 \value{
-Returns the json data as a nested list
+Returns the json data as a nested list.
 }
 \description{
-Get point forecast data as a raw nested json list
+Raw JSON Point Forecast Data
 }
 \examples{
 .point_forecast(33, -80)

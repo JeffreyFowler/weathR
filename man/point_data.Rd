@@ -2,20 +2,20 @@
 % Please edit documentation in R/01-point_data.R
 \name{point_data}
 \alias{point_data}
-\title{Gets a subset of NWS point metadata for a given lat/lon}
+\title{Get NWS Metadata for a Point}
 \usage{
 point_data(lat, lon)
 }
 \arguments{
-\item{lat}{Latitude of the point to fetch}
+\item{lat}{Latitude.}
 
-\item{lon}{Longitude of the point to fetch}
+\item{lon}{Longitude.}
 }
 \value{
-A sf point object with NWS metadata
+A simple features point object with NWS metadata.
 }
 \description{
-Gets a subset of NWS point metadata for a given lat/lon
+Get NWS Metadata for a Point
 }
 \examples{
 \donttest{

@@ -2,18 +2,18 @@
 % Please edit documentation in R/00-auxiliary.R
 \name{dir_as_integer}
 \alias{dir_as_integer}
-\title{Convert wind direction from a character to an integer}
+\title{Convert Wind Direction from a Character to an Integer}
 \usage{
 dir_as_integer(direction)
 }
 \arguments{
-\item{direction}{The direction as a string (N, NNE, NE, ENE, E, ESE, etc.)}
+\item{direction}{A direction, as a string (N, NNE, NE, ENE, E, ESE, etc).}
 }
 \value{
-An integer representing degrees clockwise from north
+An integer representing degrees clockwise from north.
 }
 \description{
-Convert wind direction from a character to an integer
+Convert Wind Direction from a Character to an Integer
 }
 \examples{
 dir_as_integer("NNW")

@@ -2,20 +2,20 @@
 % Please edit documentation in R/01-point_data.R
 \name{.point_data}
 \alias{.point_data}
-\title{Get the unprocessed http response for point data corresponding to a given latitude/longitude from the NWS}
+\title{Get the JSON Data for a Point}
 \usage{
 .point_data(lat, lon)
 }
 \arguments{
-\item{lat}{Latitude of the point to fetch}
+\item{lat}{Latitude of the point to fetch data for.}
 
-\item{lon}{Longitude of the point to fetch}
+\item{lon}{Longitude of the point to fetch data for.}
 }
 \value{
-A nested list containing NWS point data
+A nested list containing NWS point data.
 }
 \description{
-Get the unprocessed http response for point data corresponding to a given latitude/longitude from the NWS
+Get the JSON Data for a Point
 }
 \examples{
 \donttest{

@@ -1,12 +1,12 @@
 #===================================================#
 #         .POINT_DATA HIDDEN IMPLEMENTATION         #
 #===================================================#
-#' Get the unprocessed http response for point data corresponding to a given latitude/longitude from the NWS
+#' Get the JSON Data for a Point
 #'
-#' @param lat Latitude of the point to fetch
-#' @param lon Longitude of the point to fetch
+#' @param lat Latitude of the point to fetch data for.
+#' @param lon Longitude of the point to fetch data for.
 #'
-#' @return A nested list containing NWS point data
+#' @return A nested list containing NWS point data.
 #' @export
 #'
 #' @examples
@@ -25,12 +25,12 @@
 #=============================#
 #         POINT_DATA          #
 #=============================#
-#' Gets a subset of NWS point metadata for a given lat/lon
+#' Get NWS Metadata for a Point
 #'
-#' @param lat Latitude of the point to fetch
-#' @param lon Longitude of the point to fetch
+#' @param lat Latitude.
+#' @param lon Longitude.
 #'
-#' @return A sf point object with NWS metadata
+#' @return A simple features point object with NWS metadata.
 #' @export
 #'
 #' @examples
@@ -66,12 +66,12 @@ point_data <- function(lat, lon){
 #=================================#
 #         POINT_STATION           #
 #=================================#
-#' Fetch the nearest ASOS station to a point that is inside the same forecast region as the point specified
+#' Find Nearest ASOS/AWOS Station
 #'
-#' @param lat Latitude
-#' @param lon Longitude
+#' @param lat Latitude.
+#' @param lon Longitude.
 #'
-#' @return A string corresponding to a Radar, ASOS, or AWOS station.
+#' @return A string corresponding to an ASOS or AWOS station.
 #' @export
 #'
 #' @examples
@@ -115,10 +115,10 @@ point_station <- function(lat, lon){
 #===============================#
 #         STATIONS NEAR         #
 #===============================#
-#' Fetch stations near a lat/lon point, and within that lat/lon's forecast zone
+#' Find All Stations in a Point's Forecast Zone
 #'
-#' @param lat Latitude for which to find nearby stations
-#' @param lon Longitude for which to find nearby stations
+#' @param lat Latitude.
+#' @param lon Longitude.
 #'
 #' @return An sf object with station identifiers, geometry as coordinates, and their euclidian distance (in miles) to the station provided.
 #' @export

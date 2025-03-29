@@ -2,18 +2,18 @@
 % Please edit documentation in R/03-station_data.R
 \name{.station_data}
 \alias{.station_data}
-\title{Fetch station metadata data as a nested list}
+\title{Raw JSON Station Metadata}
 \usage{
 .station_data(station_id)
 }
 \arguments{
-\item{station_id}{The ASOS or AWOS station ID (ex: KDEN, KBOS, KNYC, etc)}
+\item{station_id}{The station identifier (ex: KDEN, KBOS, KNYC, etc).}
 }
 \value{
-Returns all station data provided for the NWS
+Returns station data provided for the National Weather Service.
 }
 \description{
-Fetch station metadata data as a nested list
+Raw JSON Station Metadata
 }
 \examples{
 \donttest{

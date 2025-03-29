@@ -1,17 +1,16 @@
 #=======================================#
 #         STATION OBSERVATIONS          #
 #=======================================#
-#' Fetch station observations for an ASOS or AWOS ID
+#' Station Observations
 #'
-#' @param station_id The AWOS or ASOS station ID
-#' @param timezone The timezone to denominate timestamps in. Defaults to local time
-#' @param dir_numeric Should the wind direction be returned as a numeric, or a character? TRUE uses numeric wind directions, FALSE uses characters
+#' @param station_id The station identifier (ex: KDEN, KBOS, KNYC, etc).
+#' @param dir_numeric `TRUE` for numeric directions, `FALSE` for character directions; defaults to `FALSE`.
+#' @param timezone The nominal timezone for the forecast. One of `OlsonNames()` or `-1` for local time. Defaults to `-1`.
 #'
-#' @return An sf with coordinates for the AWOS/ASOS station, time, and observed values.
+#' @return Simple features point corresponding to the given station identifier with recent meteorological observations.
 #' @export
 #'
 #' @examples
-#' # Gets the highest observed temperatures in Boston
 #' \donttest{
 #' station_obs("KBOS") %>% data.frame() %>%
 #'   dplyr::select(-geometry) %>%

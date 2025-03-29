@@ -2,27 +2,26 @@
 % Please edit documentation in R/02-point_forecast.R
 \name{point_forecast}
 \alias{point_forecast}
-\title{Fetch the weather forecast for a lat/lon point's corresponding forecast zone, denominated in the given timezone.}
+\title{Point Forecast Data}
 \usage{
 point_forecast(lat, lon, timezone = -1, dir_numeric = FALSE)
 }
 \arguments{
-\item{lat}{Latitude of the point to fetch}
+\item{lat}{Latitude.}
 
-\item{lon}{Longitude of the point to fetch}
+\item{lon}{Longitude.}
 
-\item{timezone}{The nominal timezone for the forecast. Defaults to local time for the forecast office. Can be anything from OlsonNames().}
+\item{timezone}{The nominal timezone for the forecast. One of \code{OlsonNames()} or \code{-1} for local time. Defaults to \code{-1}.}
 
-\item{dir_numeric}{Switches the wind direction between a character (N, NNE, E, etc.) and a number, representing degrees clockwise from North. Defaults to FALSE (character).}
+\item{dir_numeric}{\code{TRUE} for numeric directions, \code{FALSE} for character directions; defaults to \code{FALSE}.}
 }
 \value{
-A sf dataframe with with forecasted observations by starting hour-valid.
+Simple features object with forecast meteorological values.
 }
 \description{
-Fetch the weather forecast for a lat/lon point's corresponding forecast zone, denominated in the given timezone.
+Point Forecast Data
 }
 \examples{
-# converts data back to a dataframe and filters for where probability of rain is greater than 10\%
 \donttest{
 point_forecast(lat = 40.71427000, lon = -74.00597000, dir_numeric = TRUE)
 }

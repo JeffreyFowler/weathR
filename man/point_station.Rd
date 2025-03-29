@@ -2,20 +2,20 @@
 % Please edit documentation in R/01-point_data.R
 \name{point_station}
 \alias{point_station}
-\title{Fetch the nearest ASOS station to a point that is inside the same forecast region as the point specified}
+\title{Find Nearest ASOS/AWOS Station}
 \usage{
 point_station(lat, lon)
 }
 \arguments{
-\item{lat}{Latitude}
+\item{lat}{Latitude.}
 
-\item{lon}{Longitude}
+\item{lon}{Longitude.}
 }
 \value{
-A string corresponding to a Radar, ASOS, or AWOS station.
+A string corresponding to an ASOS or AWOS station.
 }
 \description{
-Fetch the nearest ASOS station to a point that is inside the same forecast region as the point specified
+Find Nearest ASOS/AWOS Station
 }
 \examples{
 # Gets the observation data as an sf associated with a point

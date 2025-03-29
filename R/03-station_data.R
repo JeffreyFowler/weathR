@@ -1,11 +1,11 @@
 #=====================================================#
 #         STATION DATA HIDDEN IMPLEMENTATION          #
 #=====================================================#
-#' Fetch station metadata data as a nested list
+#' Raw JSON Station Metadata
 #'
-#' @param station_id The ASOS or AWOS station ID (ex: KDEN, KBOS, KNYC, etc)
+#' @param station_id The station identifier (ex: KDEN, KBOS, KNYC, etc).
 #'
-#' @return Returns all station data provided for the NWS
+#' @return Returns station data provided for the National Weather Service.
 #' @export
 #'
 #' @examples
@@ -28,15 +28,14 @@
 #=================================#
 #         STATION COORDS          #
 #=================================#
-#' Fetch station coordinates
+#' Station Coordinates
 #'
-#' @param station_id The ASOS or AWOS station ID (ex: KDEN, KBOS, KNYC, etc)
+#' @param station_id The station identifier (ex: KDEN, KBOS, KNYC, etc).
 #'
-#' @return Returns a named list with latitude and longitude like c("lat" = x, "lon" = y)
+#' @return Named list with latitude and longitude like: `c("lat" = x, "lon" = y)`.
 #' @export
 #'
 #' @examples
-#' # Converts station data to a sf point
 #' \dontrun{
 #' station_coords("KBOS") %>%
 #'   data.frame(lat = .[["lat"]], lon = .[["lon"]]) %>%
@@ -58,15 +57,14 @@ station_coords <- function(station_id){
 #===============================#
 #         STATION POINT         #
 #===============================#
-#' Fetch station coordinates as a point
+#' Station Coordinates as a Point
 #'
-#' @param station_id The ASOS or AWOS station ID (ex: KDEN, KBOS, KNYC, etc)
+#' @param station_id The station identifier (ex: KDEN, KBOS, KNYC, etc).
 #'
-#' @return an sf point
+#' @return Simple features point corresponding to the given station identifier.
 #' @export
 #'
 #' @examples
-#' # plots the ASOS station for KDEN using tmap
 #' \donttest{
 #' install.packages("tmap")
 #' library(tmap)
@@ -89,13 +87,12 @@ station_point <- function(station_id){
 #===================================#
 #' Fetch station timezone
 #'
-#' @param station_id The ASOS or AWOS station ID (ex: KDEN, KBOS, KNYC, etc)
+#' @param station_id The station identifier (ex: KDEN, KBOS, KNYC, etc).
 #'
-#' @return Returns a string corresponding to a timezone from OlsonNames()
+#' @return A character corresponding to a timezone from `OlsonNames()`.
 #' @export
 #'
 #' @examples
-#' # Converts the current time into the timezone for the Denver International Airport ASOS station.
 #' \donttest{
 #' Sys.time() %>% lubridate::force_tz(tzone = station_tz("KDEN"))
 #' }

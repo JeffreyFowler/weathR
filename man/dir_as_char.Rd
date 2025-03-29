@@ -2,18 +2,18 @@
 % Please edit documentation in R/00-auxiliary.R
 \name{dir_as_char}
 \alias{dir_as_char}
-\title{Convert wind direction from a numeric to a character}
+\title{Convert Wind Direction from Numeric to Character}
 \usage{
 dir_as_char(direction)
 }
 \arguments{
-\item{direction}{A string corresponding to direction ("N", "NNE", etc.)}
+\item{direction}{Numeric degrees clockwise from north, (0 = N, 45 = NE, etc).}
 }
 \value{
-Returns a character (N, NNE, NE, etc.)
+Character direction (N, NNE, NE, etc).
 }
 \description{
-Convert wind direction from a numeric to a character
+Convert Wind Direction from Numeric to Character
 }
 \examples{
 dir_as_char(330)

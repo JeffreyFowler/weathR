@@ -2,21 +2,20 @@
 % Please edit documentation in R/03-station_data.R
 \name{station_point}
 \alias{station_point}
-\title{Fetch station coordinates as a point}
+\title{Station Coordinates as a Point}
 \usage{
 station_point(station_id)
 }
 \arguments{
-\item{station_id}{The ASOS or AWOS station ID (ex: KDEN, KBOS, KNYC, etc)}
+\item{station_id}{The station identifier (ex: KDEN, KBOS, KNYC, etc).}
 }
 \value{
-an sf point
+Simple features point corresponding to the given station identifier.
 }
 \description{
-Fetch station coordinates as a point
+Station Coordinates as a Point
 }
 \examples{
-# plots the ASOS station for KDEN using tmap
 \donttest{
 install.packages("tmap")
 library(tmap)

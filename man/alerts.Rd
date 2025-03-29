@@ -2,15 +2,15 @@
 % Please edit documentation in R/08-active_alerts.R
 \name{alerts}
 \alias{alerts}
-\title{Get active NWS alerts}
+\title{National Weather Service Alerts}
 \usage{
 alerts()
 }
 \value{
-A dataframe containing various columns identifying and describing alerts
+Dataframe containing various columns identifying and describing alerts.
 }
 \description{
-Get active NWS alerts
+National Weather Service Alerts
 }
 \examples{
 # Get all the red flag warnings

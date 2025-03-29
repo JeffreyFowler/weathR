@@ -3,12 +3,12 @@
 #=============================#
 #' Get the weather observed thus far today at the nearest ASOS station to a point which is in the same forecast zone as the given point.
 #'
-#' @param lat Latitude of a point
-#' @param lon Longitude of a point
-#' @param timezone Timezone to denominate results in; -1 for local time
-#' @param dir_numeric Logical; TRUE for numeric wind directions, FALSE for character wind directions
+#' @param lat Latitude.
+#' @param lon Longitude.
+#' @param timezone The nominal timezone for the forecast. One of `OlsonNames()` or `-1` for local time. Defaults to `-1`.
+#' @param dir_numeric `TRUE` for numeric directions, `FALSE` for character directions; defaults to `FALSE`.
 #'
-#' @return A sf object with weather observations for today
+#' @return Simple features point corresponding to the given station identifier with recent meteorological forecast values for today.
 #' @export
 #'
 #' @examples

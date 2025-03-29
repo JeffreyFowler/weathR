@@ -2,20 +2,20 @@
 % Please edit documentation in R/01-point_data.R
 \name{stations_near}
 \alias{stations_near}
-\title{Fetch stations near a lat/lon point, and within that lat/lon's forecast zone}
+\title{Find All Stations in a Point's Forecast Zone}
 \usage{
 stations_near(lat, lon)
 }
 \arguments{
-\item{lat}{Latitude for which to find nearby stations}
+\item{lat}{Latitude.}
 
-\item{lon}{Longitude for which to find nearby stations}
+\item{lon}{Longitude.}
 }
 \value{
 An sf object with station identifiers, geometry as coordinates, and their euclidian distance (in miles) to the station provided.
 }
 \description{
-Fetch stations near a lat/lon point, and within that lat/lon's forecast zone
+Find All Stations in a Point's Forecast Zone
 }
 \examples{
 # Plot the a station with given points and the nearby stations in a tmap

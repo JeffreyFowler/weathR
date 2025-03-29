@@ -3,9 +3,9 @@
 #===============================#
 #' Get todays weather data, given a station ID
 #'
-#' @param station_id The ASOS or AWOS station ID (Ex: KDEN, KNYC, etc.)
-#' @param timezone The timezone to denominate results in. Must be one of OlsonNames().
-#' @param dir_numeric Logical; Should the wind direction be returned as a numeric, or a character?
+#' @param station_id The station identifier (ex: KDEN, KNYC, etc).
+#' @param timezone The nominal timezone for the forecast. One of `OlsonNames()` or `-1` for local time. Defaults to `-1`.
+#' @param dir_numeric `TRUE` for numeric directions, `FALSE` for character directions; defaults to `FALSE`.
 #'
 #' @return A sf object with timestamps and weather values
 #' @export

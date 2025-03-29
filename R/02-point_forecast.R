@@ -1,12 +1,12 @@
 #=======================================================#
 #         .POINT FORECAST HIDDEN IMPLEMENTATION         #
 #=======================================================#
-#' Get point forecast data as a raw nested json list
+#' Raw JSON Point Forecast Data
 #'
-#' @param lat Latitude
-#' @param lon Longitude
+#' @param lat Latitude.
+#' @param lon Longitude.
 #'
-#' @return Returns the json data as a nested list
+#' @return Returns the json data as a nested list.
 #' @export
 #'
 #' @examples .point_forecast(33, -80)
@@ -30,14 +30,14 @@
 #=========================================================#
 #         ..POINT FORECAST HIDDEN IMPLEMENTATION          #
 #=========================================================#
-#' Get the point forecast AND the timezone for the point, all in one function call.
+#' Point Forecast Data and Local Timezone
 #'
-#' @param lat Latitude
-#' @param lon Longitude
-#' @param timezone Timezone, -1 for local time
-#' @param dir_numeric Logical; TRUE for numeric directions, FALSE for character directions
+#' @param lat Latitude.
+#' @param lon Longitude.
+#' @param dir_numeric `TRUE` for numeric directions, `FALSE` for character directions; defaults to `FALSE`.
+#' @param timezone The nominal timezone for the forecast. One of `OlsonNames()` or `-1` for local time. Defaults to `-1`.
 #'
-#' @return A list containing point forecast sf and the timezone
+#' @return A list containing point forecast sf and the timezone.
 #' @export
 #'
 #' @examples
@@ -93,18 +93,17 @@
 #=================================#
 #         POINT FORECAST          #
 #=================================#
-#' Fetch the weather forecast for a lat/lon point's corresponding forecast zone, denominated in the given timezone.
+#' Point Forecast Data
 #'
-#' @param lat Latitude of the point to fetch
-#' @param lon Longitude of the point to fetch
-#' @param dir_numeric Switches the wind direction between a character (N, NNE, E, etc.) and a number, representing degrees clockwise from North. Defaults to FALSE (character).
-#' @param timezone The nominal timezone for the forecast. Defaults to local time for the forecast office. Can be anything from OlsonNames().
+#' @param lat Latitude.
+#' @param lon Longitude.
+#' @param dir_numeric `TRUE` for numeric directions, `FALSE` for character directions; defaults to `FALSE`.
+#' @param timezone The nominal timezone for the forecast. One of `OlsonNames()` or `-1` for local time. Defaults to `-1`.
 #'
-#' @return A sf dataframe with with forecasted observations by starting hour-valid.
+#' @return Simple features object with forecast meteorological values.
 #' @export
 #'
 #' @examples
-#' # converts data back to a dataframe and filters for where probability of rain is greater than 10%
 #' \donttest{
 #' point_forecast(lat = 40.71427000, lon = -74.00597000, dir_numeric = TRUE)
 #' }
@@ -155,17 +154,16 @@ point_forecast <- function(lat, lon, timezone = -1, dir_numeric = FALSE){
 #=================================#
 #' Fetch the weather forecast for a lat/lon point tomorrow, denominated in the given timezone.
 #'
-#' @param lat Latitude
-#' @param lon Longitude
-#' @param timezone A timezone to denominate timestamps in (must be one of the Olson Names)
-#' @param dir_numeric TRUE/FALSE; Should the wind direction be numeric, or character?
-#' @param short TRUE/FALSE; Should the forecast be for only tomorrow, or both the remainder of today and tomorrow?
+#' @param lat Latitude.
+#' @param lon Longitude.
+#' @param dir_numeric `TRUE` for numeric directions, `FALSE` for character directions; defaults to `FALSE`.
+#' @param timezone The nominal timezone for the forecast. One of `OlsonNames()` or `-1` for local time. Defaults to `-1`.
+#' @param short `TRUE` for only tomorrow, `FALSE` for today and tomorrow; defaults to `TRUE`.
 #'
-#' @return Returns an sf with forecast values
+#' @return Simple features object with forecast meteorological values.
 #' @export
 #'
 #' @examples
-#' # Get the maximum temperature in tomorrows forecast
 #' \donttest{
 #' point_tomorrow(lat = 33, lon = -80)
 #' }
