@@ -27,7 +27,7 @@ station_forecast <- function(station_id, timezone = -1, dir_numeric = FALSE){
 #===================================#
 #         STATION TOMORROW          #
 #===================================#
-#' Get tomorrows forecast for a given station_id
+#' Tomorrows Forecast
 #'
 #' @param station_id Station identifier (ex: KDEN, KBOS, KNYC, etc).
 #' @param dir_numeric `TRUE` for numeric directions, `FALSE` for character directions; defaults to `FALSE`.

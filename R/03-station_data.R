@@ -5,7 +5,7 @@
 #'
 #' @param station_id The station identifier (ex: KDEN, KBOS, KNYC, etc).
 #'
-#' @return Returns station data provided for the National Weather Service.
+#' @return Station data provided for the National Weather Service.
 #' @export
 #'
 #' @examples
@@ -85,7 +85,7 @@ station_point <- function(station_id){
 #===================================#
 #         STATION TIMEZONE          #
 #===================================#
-#' Fetch station timezone
+#' Fetch Station Timezone
 #'
 #' @param station_id The station identifier (ex: KDEN, KBOS, KNYC, etc).
 #'

@@ -7,7 +7,7 @@
 #' @param dir_numeric `TRUE` for numeric directions, `FALSE` for character directions; defaults to `FALSE`.
 #' @param timezone The nominal timezone for the forecast. One of `OlsonNames()` or `-1` for local time. Defaults to `-1`.
 #'
-#' @return Simple features point corresponding to the given station identifier with recent meteorological observations.
+#' @return Simple features corresponding to the given station identifier with recent meteorological observations.
 #' @export
 #'
 #' @examples

@@ -1,13 +1,13 @@
 #===============================#
 #         STATION TODAY         #
 #===============================#
-#' Get todays weather data, given a station ID
+#' Weather Observed Today at a Station Identifier
 #'
 #' @param station_id The station identifier (ex: KDEN, KNYC, etc).
 #' @param timezone The nominal timezone for the forecast. One of `OlsonNames()` or `-1` for local time. Defaults to `-1`.
 #' @param dir_numeric `TRUE` for numeric directions, `FALSE` for character directions; defaults to `FALSE`.
 #'
-#' @return A sf object with timestamps and weather values
+#' @return Simple features object with timestamps and meteorological values.
 #' @export
 #'
 #' @examples

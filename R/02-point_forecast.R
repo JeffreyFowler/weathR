@@ -152,7 +152,7 @@ point_forecast <- function(lat, lon, timezone = -1, dir_numeric = FALSE){
 #=================================#
 #         POINT TOMORROW          #
 #=================================#
-#' Fetch the weather forecast for a lat/lon point tomorrow, denominated in the given timezone.
+#' Weather Forecast for Tomorrow at a Point
 #'
 #' @param lat Latitude.
 #' @param lon Longitude.

@@ -3,8 +3,6 @@ output: github_document
 always_allow_html: TRUE
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -28,6 +26,12 @@ You can install the development version of weathR from [GitHub](https://github.c
 ``` r
 # install.packages("devtools")
 devtools::install_github("JeffreyFowler/weathR")
+```
+
+Or, you can get the official release version from CRAN:
+
+``` r
+install.packages("weathR")
 ```
 
 ## Fetching NWS Metadata for a Location

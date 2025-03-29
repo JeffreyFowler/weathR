@@ -1,7 +1,7 @@
 #=============================#
 #         POINT TODAY         #
 #=============================#
-#' Get the weather observed thus far today at the nearest ASOS station to a point which is in the same forecast zone as the given point.
+#' Weather Observed Today at a Point
 #'
 #' @param lat Latitude.
 #' @param lon Longitude.
