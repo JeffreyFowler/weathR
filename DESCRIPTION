@@ -1,0 +1,23 @@
+Package: WeathR
+Title: Get National Weather Service API Data
+Version: 0.1.0
+Authors@R: 
+    person("Jeffrey", "Fowler", email = "JeffreyF6120@gmail.com", 
+       role = c("aut", "cre"), 
+       comment = c(ORCID = "0009-0003-9448-0980"))
+Description: Quick fetching of NWS (National Weather Service) data from the NWS API. Users can fetch NWS metadata such as forecast zones and nearest ASOS/AWOS stations with functions like point_station and stations_near. Daily forecasts for points and stations can be fetched with station_obs and station_forecast. Versions of these methods are also available for lat/lon point data. Additionally, users can get active NWS alerts using the alerts() function. The package returns data in a sf (simple features) object whenever possible. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    dplyr,
+    httr2,
+    janitor,
+    jsonlite,
+    lubridate,
+    lutz,
+    magrittr,
+    purrr,
+    sf,
+    tibble

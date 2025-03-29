@@ -1,0 +1,45 @@
+# History and session data
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+
+# RStudio files
+.Rproj.user/
+*.Rproj
+
+# Compiled source code
+*.so
+*.dll
+*.exe
+*.o
+*.pyc
+__pycache__/
+
+# Package build artifacts
+.Rcheck/
+.Rbuildignore
+*.tar.gz
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Reports and notebooks
+*.html
+*.pdf
+*.docx
+*.log
+*.aux
+*.out
+*.toc
+
+# Cache or temporary files
+*.swp
+*.tmp
+*.bak
+.cache/
+.Rproj.user
+.Rdata
+.httr-oauth
+.quarto
