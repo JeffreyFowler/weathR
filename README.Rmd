@@ -143,7 +143,5 @@ kden_map <- stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>
 tmap::tmap_save(kden_map, filename = "man/figures/dynamic_map.html", width = 6, height = 4)
 
 ```
-[You can click here to view the dynamic map we created.](https://jeffreyfowler.github.io/weathR/man/figures/dynamic_map.html)
-
 
 This is just a sampling of the functionality available in this package. Feel free to browse the documentation with the `?function` commands in the R console to explore further!
