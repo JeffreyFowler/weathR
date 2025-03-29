@@ -87,7 +87,7 @@ Rather than using a latitude/longitude point, we can use an ASOS or AWOS station
 
 Lets get a list of the forecast wind speed, wind direction, and skies, by time.
 
-```{r example3, warning=FALSE}
+```{r example3, warning=FALSE, results='asis'}
 
 station_forecast(station_id = "KNYC") %>% 
   as.data.frame() %>% 
@@ -126,7 +126,7 @@ tmap::tmap_options(basemaps = c(Topo = "Esri.WorldTopoMap"))
 kden_map <- stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>% 
   tmap::tm_shape() + 
   #Plot stations near our point, with color becoming darker as they get closer
-  tmap::tm_dots(col = "euc_dist", palette = "-Blues", title = "Euclidian Distance") +
+  tmap::tm_dots(size = .08, col = "euc_dist", palette = "-Blues", title = "Euclidian Distance") +
   tmap::tm_shape(
     st_as_sf(
       data.frame(
@@ -137,13 +137,13 @@ kden_map <- stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>
       crs = 4326
     )
   ) +
-  tmap::tm_dots()
+  tmap::tm_dots(size = .08)
 
 #Save the map as a static plot so I can show it on github
-tmap::tmap_save(kden_map, filename = "man/figures/static_map.png", width = 6, height = 4)
+tmap::tmap_save(kden_map, filename = "man/figures/dynamic_map.html", width = 6, height = 4)
 
 ```
+[You can click here to view the dynamic map we created.](https://jeffreyfowler.github.io/weathR/man/figures/dynamic_map.html)
 
-![](man/figures/static_map.png)
 
 This is just a sampling of the functionality available in this package. Feel free to browse the documentation with the `?function` commands in the R console to explore further!
