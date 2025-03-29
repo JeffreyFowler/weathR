@@ -25,3 +25,5 @@ Suggests:
   gt,
   snakecase,
   tmap
+URL: https://github.com/JeffreyFowler/weathR
+BugReports: https://github.com/JeffreyFowler/weathR/issues
