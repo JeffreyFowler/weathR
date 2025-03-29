@@ -104,7 +104,8 @@ station_forecast(station_id = "KNYC") %>%
   filter(dplyr::row_number() == 1 | skies != lag(skies)) %>%  #Keep only observations where the first row is 0 and the skies change
   rename_with(~ gsub("_", " ", .) %>% stringr::str_to_title()) %>% #switch from snake_case to Title Case
   gt::gt() %>% 
-  gt::tab_header(title = paste0("Skies forecast for KNYC, the Week of ", Sys.Date()))
+  gt::tab_header(title = paste0("Skies forecast for KNYC, the Week of ", Sys.Date())) %>% 
+  gt::opt_css(css = "")
 ```
 
 ## Finding NWS ASOS/AWOS Stations Near a Point
@@ -143,5 +144,6 @@ kden_map <- stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>
 tmap::tmap_save(kden_map, filename = "man/figures/dynamic_map.html", width = 6, height = 4)
 
 ```
+[You can click here to view the dynamic map we created.](https://jeffreyfowler.github.io/weathR/man/figures/dynamic_map.html)
 
 This is just a sampling of the functionality available in this package. Feel free to browse the documentation with the `?function` commands in the R console to explore further!
