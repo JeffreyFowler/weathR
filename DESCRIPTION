@@ -3,7 +3,7 @@ Title: Interact with the U.S. National Weather Service API
 Version: 0.1.0
 Authors@R: 
     person("Jeffrey", "Fowler", email = "JeffreyF6120@gmail.com", 
-       role = c("aut", "cre"), 
+       role = c("aut", "cre", "cph"), 
        comment = c(ORCID = "0009-0003-9448-0980"))
 Description: 
     Enables interaction with the National Weather Service application programming web-interface. 
