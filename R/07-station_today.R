@@ -11,7 +11,9 @@
 #' @export
 #'
 #' @examples
+#' \donttest{
 #' station_today("KNYC")
+#' }
 station_today <- function(station_id, timezone = -1, dir_numeric = FALSE){
 
   coords <- station_coords("KDEN")

@@ -14,7 +14,7 @@ station_obs(station_id, timezone = -1, dir_numeric = FALSE)
 \item{dir_numeric}{\code{TRUE} for numeric directions, \code{FALSE} for character directions; defaults to \code{FALSE}.}
 }
 \value{
-Simple features point corresponding to the given station identifier with recent meteorological observations.
+Simple features corresponding to the given station identifier with recent meteorological observations.
 }
 \description{
 Station Observations

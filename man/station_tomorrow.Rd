@@ -2,7 +2,7 @@
 % Please edit documentation in R/05-station_forecast.R
 \name{station_tomorrow}
 \alias{station_tomorrow}
-\title{Get tomorrows forecast for a given station_id}
+\title{Tomorrows Forecast}
 \usage{
 station_tomorrow(station_id, timezone = -1, dir_numeric = FALSE, short = TRUE)
 }
@@ -19,7 +19,7 @@ station_tomorrow(station_id, timezone = -1, dir_numeric = FALSE, short = TRUE)
 Simple features point corresponding to the given station identifier with recent meteorological forecast values.
 }
 \description{
-Get tomorrows forecast for a given station_id
+Tomorrows Forecast
 }
 \examples{
 station_tomorrow("KBOS")

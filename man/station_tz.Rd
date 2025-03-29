@@ -2,7 +2,7 @@
 % Please edit documentation in R/03-station_data.R
 \name{station_tz}
 \alias{station_tz}
-\title{Fetch station timezone}
+\title{Fetch Station Timezone}
 \usage{
 station_tz(station_id)
 }
@@ -13,7 +13,7 @@ station_tz(station_id)
 A character corresponding to a timezone from \code{OlsonNames()}.
 }
 \description{
-Fetch station timezone
+Fetch Station Timezone
 }
 \examples{
 \donttest{

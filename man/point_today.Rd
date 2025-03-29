@@ -2,7 +2,7 @@
 % Please edit documentation in R/06-point_today.R
 \name{point_today}
 \alias{point_today}
-\title{Get the weather observed thus far today at the nearest ASOS station to a point which is in the same forecast zone as the given point.}
+\title{Weather Observed Today at a Point}
 \usage{
 point_today(lat, lon, timezone = -1, dir_numeric = FALSE)
 }
@@ -19,7 +19,7 @@ point_today(lat, lon, timezone = -1, dir_numeric = FALSE)
 Simple features point corresponding to the given station identifier with recent meteorological forecast values for today.
 }
 \description{
-Get the weather observed thus far today at the nearest ASOS station to a point which is in the same forecast zone as the given point.
+Weather Observed Today at a Point
 }
 \examples{
 # Produce a GT summary of the weather thus far for a given lat/lon

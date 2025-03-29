@@ -10,7 +10,7 @@
 \item{station_id}{The station identifier (ex: KDEN, KBOS, KNYC, etc).}
 }
 \value{
-Returns station data provided for the National Weather Service.
+Station data provided for the National Weather Service.
 }
 \description{
 Raw JSON Station Metadata

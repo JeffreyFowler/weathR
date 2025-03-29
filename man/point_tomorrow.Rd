@@ -2,7 +2,7 @@
 % Please edit documentation in R/02-point_forecast.R
 \name{point_tomorrow}
 \alias{point_tomorrow}
-\title{Fetch the weather forecast for a lat/lon point tomorrow, denominated in the given timezone.}
+\title{Weather Forecast for Tomorrow at a Point}
 \usage{
 point_tomorrow(lat, lon, timezone = -1, dir_numeric = FALSE, short = TRUE)
 }
@@ -21,7 +21,7 @@ point_tomorrow(lat, lon, timezone = -1, dir_numeric = FALSE, short = TRUE)
 Simple features object with forecast meteorological values.
 }
 \description{
-Fetch the weather forecast for a lat/lon point tomorrow, denominated in the given timezone.
+Weather Forecast for Tomorrow at a Point
 }
 \examples{
 \donttest{

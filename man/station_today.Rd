@@ -2,7 +2,7 @@
 % Please edit documentation in R/07-station_today.R
 \name{station_today}
 \alias{station_today}
-\title{Get todays weather data, given a station ID}
+\title{Weather Observed Today at a Station Identifier}
 \usage{
 station_today(station_id, timezone = -1, dir_numeric = FALSE)
 }
@@ -14,11 +14,13 @@ station_today(station_id, timezone = -1, dir_numeric = FALSE)
 \item{dir_numeric}{\code{TRUE} for numeric directions, \code{FALSE} for character directions; defaults to \code{FALSE}.}
 }
 \value{
-A sf object with timestamps and weather values
+Simple features object with timestamps and meteorological values.
 }
 \description{
-Get todays weather data, given a station ID
+Weather Observed Today at a Station Identifier
 }
 \examples{
+\donttest{
 station_today("KNYC")
+}
 }
