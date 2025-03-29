@@ -13,7 +13,7 @@
 #'
 #' @examples
 #' # Produce a GT summary of the weather thus far for a given lat/lon
-#' \donttest{
+#' \dontrun{
 #' install.packages("gt")
 #' library(gt)
 #' install.packages("snakecase")

@@ -21,3 +21,7 @@ Imports:
     purrr,
     sf,
     tibble
+Suggests:
+  gt,
+  snakecase,
+  tmap

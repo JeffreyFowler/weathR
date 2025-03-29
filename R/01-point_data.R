@@ -125,7 +125,10 @@ point_station <- function(lat, lon){
 #'
 #' @examples
 #' # Plot the a station with given points and the nearby stations in a tmap
-#' \donttest{
+#' \dontrun{
+#' install.packages("tmap")
+#' library(tmap)
+#'
 #' stations_near(lat = 33, lon = -80) %>%
 #'   tm_shape() +
 #'   tm_dots(size = .1) +

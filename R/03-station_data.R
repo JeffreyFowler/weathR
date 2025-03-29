@@ -65,7 +65,7 @@ station_coords <- function(station_id){
 #' @export
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' install.packages("tmap")
 #' library(tmap)
 #'

@@ -16,7 +16,7 @@ Simple features point corresponding to the given station identifier.
 Station Coordinates as a Point
 }
 \examples{
-\donttest{
+\dontrun{
 install.packages("tmap")
 library(tmap)
 
