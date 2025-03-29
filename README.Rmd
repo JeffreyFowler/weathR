@@ -87,7 +87,7 @@ Rather than using a latitude/longitude point, we can use an ASOS or AWOS station
 
 Lets get a list of the forecast wind speed, wind direction, and skies, by time.
 
-```{r example3, message=FALSE, paged.print=FALSE, warning=FALSE, results='asis'}
+```{r example3, message=FALSE, warning=FALSE}
 
 station_forecast(station_id = "KNYC") %>% 
   as.data.frame() %>% 
@@ -105,7 +105,8 @@ station_forecast(station_id = "KNYC") %>%
   rename_with(~ gsub("_", " ", .) %>% stringr::str_to_title()) %>% #switch from snake_case to Title Case
   gt::gt() %>% 
   gt::tab_header(title = paste0("Skies forecast for KNYC, the Week of ", Sys.Date())) %>% 
-  gt::opt_css(css = "")
+  gt::opt_css(css = "") %>% 
+  print()
 ```
 
 ## Finding NWS ASOS/AWOS Stations Near a Point
