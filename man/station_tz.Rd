@@ -17,7 +17,7 @@ Fetch station timezone
 }
 \examples{
 # Converts the current time into the timezone for the Denver International Airport ASOS station.
-donttest{
+\donttest{
 Sys.time() \%>\% lubridate::force_tz(tzone = station_tz("KDEN"))
 }
 }

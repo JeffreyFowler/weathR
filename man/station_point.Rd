@@ -17,7 +17,10 @@ Fetch station coordinates as a point
 }
 \examples{
 # plots the ASOS station for KDEN using tmap
-\dontrun{
+\donttest{
+install.packages("tmap")
+library(tmap)
+
 tmap_mode("view")
 station_point("KDEN") \%>\% tm_shape() + tm_dots(size = .1)
 }
