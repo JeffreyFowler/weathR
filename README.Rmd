@@ -41,7 +41,8 @@ library(sf) #This is used later in our documentation
 
 # Using google maps, we find the coordinates for Central Park, NYC.
 point_data(lat = 40.768472897200986, lon = -73.97600351884695) %>% 
-  as.data.frame() 
+  as.data.frame() %>% 
+  head()
 
 ```
 
@@ -52,7 +53,8 @@ point_data(lat = 40.768472897200986, lon = -73.97600351884695) %>%
 # We can fetch forecast temperatures (in degrees fahrenheit) for NYC
 point_forecast(lat = 40.768472897200986, lon = -73.97600351884695) %>% 
   as.data.frame() %>% 
-  select(time, temp)
+  select(time, temp) %>% 
+  head()
 
 # We can even produce a graph of the forecast
 library(ggplot2)
@@ -81,11 +83,12 @@ Rather than using a latitude/longitude point, we can use an ASOS or AWOS station
 
 Lets get a list of the forecast wind speed, wind direction, and skies, by time.
 
-```{r example3}
+```{r example3, warning=FALSE}
 
 station_forecast(station_id = "KNYC") %>% 
   as.data.frame() %>% 
-  select(time, wind_speed, skies)
+  select(time, wind_speed, skies) %>% 
+  head()
 
 # We can easily put this result into a GT table for easy viewing
 
@@ -108,13 +111,15 @@ There a number of different types of weather stations. An advantage of the weath
 
 #Using the coordinates for Denver, Colorado from google maps
 stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>% 
-  as.data.frame()
+  as.data.frame() %>% 
+  head()
 
 #Or, viewing them plotted on an interactive map
 library(tmap)
 tmap::tmap_mode("view")
+tmap::tmap_options(basemaps = c(Topo = "Esri.WorldTopoMap"))
 
-stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>% 
+kden_map <- stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>% 
   tmap::tm_shape() + 
   #Plot stations near our point, with color becoming darker as they get closer
   tmap::tm_dots(col = "euc_dist", palette = "-Blues", title = "Euclidian Distance") +
@@ -130,6 +135,11 @@ stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>%
   ) +
   tmap::tm_dots()
 
+#Save the map as a static plot so I can show it on github
+tmap::tmap_save(kden_map, filename = "man/figures/static_map.png", width = 6, height = 4)
+
 ```
+
+![](man/figures/static_map.png)
 
 This is just a sampling of the functionality available in this package. Feel free to browse the documentation with the `?function` commands in the R console to explore further!
