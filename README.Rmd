@@ -97,7 +97,7 @@ station_forecast(station_id = "KNYC") %>%
 # We can easily put this result into a GT table for easy viewing
 ```
 
-```{r gtexample, message=FALSE, warning=FALSE, results='hide'}
+```{r gtexample, echo=TRUE, include = FALSE, message=FALSE, warning=FALSE, fig.keep='none'}
 library(gt)
 
 station_forecast(station_id = "KNYC") %>% 
@@ -125,7 +125,7 @@ stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>%
 
 ```
 
-```{r example5, results='hide'}
+```{r example5, echo = TRUE, include = FALSE, fig.keep='none'}
 #Or, viewing them plotted on an interactive map
 library(tmap)
 tmap::tmap_mode("view")
