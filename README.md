@@ -164,7 +164,7 @@ station_forecast(station_id = "KNYC") %>%
 ```
 
 <figure>
-<img src="man/figures/my_table" alt="my_table" />
+<img src="man/figures/my_table.png" alt="my_table" />
 <figcaption aria-hidden="true">my_table</figcaption>
 </figure>
 
