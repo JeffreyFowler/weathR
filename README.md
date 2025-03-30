@@ -164,7 +164,7 @@ station_forecast(station_id = "KNYC") %>%
 ```
 
 <figure>
-<img src="man/figures/README-example4-1.png" alt="my_table" />
+<img src="man/figures/my_table" alt="my_table" />
 <figcaption aria-hidden="true">my_table</figcaption>
 </figure>
 
@@ -192,7 +192,6 @@ stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>%
 ```
 
 ``` r
-
 #Or, viewing them plotted on an interactive map
 library(tmap)
 #> Warning: package 'tmap' was built under R version 4.4.2
@@ -225,7 +224,7 @@ stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>%
   tmap::tm_dots(size = .08)
 ```
 
-<img src="man/figures/README-example4-1.png" width="100" /> [You can
+<img src="man/figures/README-example5-1.png" width="100" /> [You can
 click here to view the dynamic map we
 created.](https://jeffreyfowler.github.io/weathR/dynamic_map.html)
 

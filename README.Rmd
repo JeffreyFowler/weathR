@@ -110,7 +110,7 @@ station_forecast(station_id = "KNYC") %>%
   gt::opt_css(css = "")
 
 ```
-![my_table](man/figures/README-example4-1.png)
+![my_table](man/figures/my_table)
 
 ## Finding NWS ASOS/AWOS Stations Near a Point
 
@@ -123,6 +123,9 @@ stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>%
   as.data.frame() %>% 
   head()
 
+```
+
+```{r example5, results='hide'}
 #Or, viewing them plotted on an interactive map
 library(tmap)
 tmap::tmap_mode("view")
