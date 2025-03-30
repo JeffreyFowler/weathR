@@ -8,7 +8,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  out.width = 100
 )
 ```
 
@@ -100,7 +100,7 @@ station_forecast(station_id = "KNYC") %>%
 ```{r gtexample, message=FALSE, warning=FALSE, results='hide'}
 library(gt)
 
-my_table <- station_forecast(station_id = "KNYC") %>% 
+station_forecast(station_id = "KNYC") %>% 
   as.data.frame() %>% 
   select(time, wind_dir, wind_speed, skies) %>% 
   filter(dplyr::row_number() == 1 | skies != lag(skies)) %>%  #Keep only observations where the first row is 0 and the skies change
@@ -109,9 +109,8 @@ my_table <- station_forecast(station_id = "KNYC") %>%
   gt::tab_header(title = paste0("Skies forecast for KNYC, the Week of ", Sys.Date())) %>% 
   gt::opt_css(css = "")
 
-gt::gtsave(my_table, "my_table.png")
 ```
-![Skies forecast table](my_table.png)
+(my_table.png)
 
 ## Finding NWS ASOS/AWOS Stations Near a Point
 
@@ -129,7 +128,7 @@ library(tmap)
 tmap::tmap_mode("view")
 tmap::tmap_options(basemaps = c(Topo = "Esri.WorldTopoMap"))
 
-kden_map <- stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>% 
+stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>% 
   tmap::tm_shape() + 
   #Plot stations near our point, with color becoming darker as they get closer
   tmap::tm_dots(size = .08, col = "euc_dist", palette = "-Blues", title = "Euclidian Distance") +
@@ -145,10 +144,7 @@ kden_map <- stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>
   ) +
   tmap::tm_dots(size = .08)
 
-#Save the map as a static plot so I can show it on github
-tmap::tmap_save(kden_map, filename = "man/figures/dynamic_map.html", width = 6, height = 4)
-
 ```
-[You can click here to view the dynamic map we created.](https://jeffreyfowler.github.io/weathR/man/figures/dynamic_map.html)
+[You can click here to view the dynamic map we created.](https://jeffreyfowler.github.io/weathR/dynamic_map.html)
 
 This is just a sampling of the functionality available in this package. Feel free to browse the documentation with the `?function` commands in the R console to explore further!

@@ -85,12 +85,12 @@ point_forecast(lat = 40.768472897200986, lon = -73.97600351884695) %>%
   select(time, temp) %>% 
   head()
 #>                      time temp
-#> 1 2025-03-29 18:00:00 EDT   52
-#> 2 2025-03-29 19:00:00 EDT   51
-#> 3 2025-03-29 20:00:00 EDT   51
-#> 4 2025-03-29 21:00:00 EDT   50
-#> 5 2025-03-29 22:00:00 EDT   50
-#> 6 2025-03-29 23:00:00 EDT   49
+#> 1 2025-03-29 20:00:00 EDT   51
+#> 2 2025-03-29 21:00:00 EDT   50
+#> 3 2025-03-29 22:00:00 EDT   50
+#> 4 2025-03-29 23:00:00 EDT   49
+#> 5 2025-03-30 00:00:00 EDT   48
+#> 6 2025-03-30 01:00:00 EDT   47
 ```
 
 ``` r
@@ -120,7 +120,7 @@ point_forecast(lat = 40.768472897200986, lon = -73.97600351884695) %>%
 #> `geom_smooth()` using formula = 'y ~ x'
 ```
 
-<img src="man/figures/README-example2-1.png" width="100%" />
+<img src="man/figures/README-example2-1.png" width="100" />
 
 ## Fetching Station ID forecast values
 
@@ -137,12 +137,12 @@ station_forecast(station_id = "KNYC") %>%
   select(time, wind_speed, skies) %>% 
   head()
 #>                      time wind_speed               skies
-#> 1 2025-03-29 18:00:00 EDT         12 Chance Rain Showers
-#> 2 2025-03-29 19:00:00 EDT         10 Chance Rain Showers
-#> 3 2025-03-29 20:00:00 EDT         10 Chance Rain Showers
-#> 4 2025-03-29 21:00:00 EDT         10 Chance Rain Showers
-#> 5 2025-03-29 22:00:00 EDT          9 Chance Rain Showers
-#> 6 2025-03-29 23:00:00 EDT          9 Chance Rain Showers
+#> 1 2025-03-29 20:00:00 EDT         10 Chance Rain Showers
+#> 2 2025-03-29 21:00:00 EDT         10 Chance Rain Showers
+#> 3 2025-03-29 22:00:00 EDT          9 Chance Rain Showers
+#> 4 2025-03-29 23:00:00 EDT          9 Chance Rain Showers
+#> 5 2025-03-30 00:00:00 EDT          8 Chance Rain Showers
+#> 6 2025-03-30 01:00:00 EDT          8 Chance Rain Showers
 ```
 
 ``` r
@@ -153,7 +153,7 @@ station_forecast(station_id = "KNYC") %>%
 ``` r
 library(gt)
 
-my_table <- station_forecast(station_id = "KNYC") %>% 
+station_forecast(station_id = "KNYC") %>% 
   as.data.frame() %>% 
   select(time, wind_dir, wind_speed, skies) %>% 
   filter(dplyr::row_number() == 1 | skies != lag(skies)) %>%  #Keep only observations where the first row is 0 and the skies change
@@ -161,14 +161,9 @@ my_table <- station_forecast(station_id = "KNYC") %>%
   gt::gt() %>% 
   gt::tab_header(title = paste0("Skies forecast for KNYC, the Week of ", Sys.Date())) %>% 
   gt::opt_css(css = "")
-
-gt::gtsave(my_table, "my_table.png")
 ```
 
-<figure>
-<img src="my_table.png" alt="Skies forecast table" />
-<figcaption aria-hidden="true">Skies forecast table</figcaption>
-</figure>
+(my_table.png)
 
 ## Finding NWS ASOS/AWOS Stations Near a Point
 
@@ -210,7 +205,7 @@ tmap::tmap_mode("view")
 ``` r
 tmap::tmap_options(basemaps = c(Topo = "Esri.WorldTopoMap"))
 
-kden_map <- stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>% 
+stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>% 
   tmap::tm_shape() + 
   #Plot stations near our point, with color becoming darker as they get closer
   tmap::tm_dots(size = .08, col = "euc_dist", palette = "-Blues", title = "Euclidian Distance") +
@@ -225,14 +220,11 @@ kden_map <- stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>
     )
   ) +
   tmap::tm_dots(size = .08)
-
-#Save the map as a static plot so I can show it on github
-tmap::tmap_save(kden_map, filename = "man/figures/dynamic_map.html", width = 6, height = 4)
-#> Interactive map saved to C:\Users\Jeffr\Desktop\WeathR_WIP\weathR\man\figures\man\figures\dynamic_map.html
 ```
 
-[You can click here to view the dynamic map we
-created.](https://jeffreyfowler.github.io/weathR/man/figures/dynamic_map.html)
+<img src="man/figures/README-example4-1.png" width="100" /> [You can
+click here to view the dynamic map we
+created.](https://jeffreyfowler.github.io/weathR/dynamic_map.html)
 
 This is just a sampling of the functionality available in this package.
 Feel free to browse the documentation with the `?function` commands in
