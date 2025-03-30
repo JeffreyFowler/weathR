@@ -151,7 +151,7 @@ station_forecast(station_id = "KNYC") %>%
 ```
 
 <figure>
-<img src="man/figures/my_table.png" alt="my_table" />
+<img src="my_table.png" alt="my_table" />
 <figcaption aria-hidden="true">my_table</figcaption>
 </figure>
 
@@ -178,7 +178,41 @@ stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>%
 #> 6       KCFO 26.84118 POINT (-104.5376 39.78419)
 ```
 
-[You can click here to view the dynamic map we
+``` r
+#Or, viewing them plotted on an interactive map
+library(tmap)
+#> Warning: package 'tmap' was built under R version 4.4.2
+#> Breaking News: tmap 3.x is retiring. Please test v4, e.g. with
+#> remotes::install_github('r-tmap/tmap')
+```
+
+``` r
+tmap::tmap_mode("view")
+#> tmap mode set to interactive viewing
+```
+
+``` r
+tmap::tmap_options(basemaps = c(Topo = "Esri.WorldTopoMap"))
+
+stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>% 
+  tmap::tm_shape() + 
+  #Plot stations near our point, with color becoming darker as they get closer
+  tmap::tm_dots(size = .08, col = "euc_dist", palette = "-Blues", title = "Euclidian Distance") +
+  tmap::tm_shape(
+    st_as_sf(
+      data.frame(
+        lon = -104.98209127042489,
+        lat = 39.73331998845491
+      ),
+      coords = c("lon", "lat"),
+      crs = 4326
+    )
+  ) +
+  tmap::tm_dots(size = .08)
+```
+
+<img src="man/figures/README-example5E-1.png" width="100" /> [You can
+click here to view the dynamic map we
 created.](https://jeffreyfowler.github.io/weathR/dynamic_map.html)
 
 This is just a sampling of the functionality available in this package.

@@ -97,7 +97,7 @@ station_forecast(station_id = "KNYC") %>%
 # We can easily put this result into a GT table for easy viewing
 ```
 
-```{r gtexample, echo=TRUE, include = FALSE, message=FALSE, warning=FALSE, fig.keep='none'}
+```{r gtexample, echo=TRUE, include = FALSE, message=FALSE, warning=FALSE}
 library(gt)
 
 station_forecast(station_id = "KNYC") %>% 
@@ -110,7 +110,7 @@ station_forecast(station_id = "KNYC") %>%
   gt::opt_css(css = "")
 
 ```
-![my_table](man/figures/my_table.png)
+![my_table](my_table.png)
 
 ## Finding NWS ASOS/AWOS Stations Near a Point
 
@@ -125,7 +125,7 @@ stations_near(lat = 39.73331998845491, lon = -104.98209127042489) %>%
 
 ```
 
-```{r example5, echo = TRUE, include = FALSE, fig.keep='none'}
+```{r example5E}
 #Or, viewing them plotted on an interactive map
 library(tmap)
 tmap::tmap_mode("view")
