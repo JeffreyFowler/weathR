@@ -163,7 +163,10 @@ station_forecast(station_id = "KNYC") %>%
   gt::opt_css(css = "")
 ```
 
-[my_table](my_table.png)
+<figure>
+<img src="man/figures/README-example4-1.png" alt="my_table" />
+<figcaption aria-hidden="true">my_table</figcaption>
+</figure>
 
 ## Finding NWS ASOS/AWOS Stations Near a Point
 

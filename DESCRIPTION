@@ -5,13 +5,7 @@ Authors@R:
     person("Jeffrey", "Fowler", email = "JeffreyF6120@gmail.com", 
        role = c("aut", "cre", "cph"), 
        comment = c(ORCID = "0009-0003-9448-0980"))
-Description: 
-    Enables interaction with the National Weather Service application programming web-interface. 
-    Users can provide latitude and longitude, Automated Surface Observing System identifier, 
-    or Automated Weather Observing System identifier to fetch recent weather observations 
-    and recent forecasts for the given location or station. Additionally, auxiliary functions 
-    exist to identify stations nearest to a point, convert wind direction from character to degrees, 
-    and fetch active warnings. Results are returned as simple feature objects whenever possible.
+Description: Enables interaction with the National Weather Service application programming web-interface. Users can provide latitude and longitude, Automated Surface Observing System identifier, or Automated Weather Observing System identifier to fetch recent weather observations and recent forecasts for the given location or station. Additionally, auxiliary functions exist to identify stations nearest to a point, convert wind direction from character to degrees, and fetch active warnings. Results are returned as simple feature objects whenever possible.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
