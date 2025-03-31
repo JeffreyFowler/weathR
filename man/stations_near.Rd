@@ -19,13 +19,7 @@ Find All Stations in a Point's Forecast Zone
 }
 \examples{
 # Plot the a station with given points and the nearby stations in a tmap
-\dontrun{
-install.packages("tmap")
-library(tmap)
-
-stations_near(lat = 33, lon = -80) \%>\%
-  tm_shape() +
-  tm_dots(size = .1) +
-   tm_shape(st_point(c(-80, 33)) \%>\% st_sfc(crs = 4326)) + tm_dots(size = .1, col = "red3")
+\donttest{
+stations_near(lat = 33, lon = -80)
 }
 }
