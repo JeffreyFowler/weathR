@@ -85,12 +85,12 @@ point_forecast(lat = 40.768472897200986, lon = -73.97600351884695) %>%
   select(time, temp) %>% 
   head()
 #>                      time temp
-#> 1 2025-03-29 20:00:00 EDT   51
-#> 2 2025-03-29 21:00:00 EDT   50
-#> 3 2025-03-29 22:00:00 EDT   50
-#> 4 2025-03-29 23:00:00 EDT   49
-#> 5 2025-03-30 00:00:00 EDT   48
-#> 6 2025-03-30 01:00:00 EDT   47
+#> 1 2025-03-31 17:00:00 EDT   72
+#> 2 2025-03-31 18:00:00 EDT   69
+#> 3 2025-03-31 19:00:00 EDT   67
+#> 4 2025-03-31 20:00:00 EDT   66
+#> 5 2025-03-31 21:00:00 EDT   65
+#> 6 2025-03-31 22:00:00 EDT   64
 ```
 
 ``` r
@@ -136,13 +136,13 @@ station_forecast(station_id = "KNYC") %>%
   as.data.frame() %>% 
   select(time, wind_speed, skies) %>% 
   head()
-#>                      time wind_speed               skies
-#> 1 2025-03-29 20:00:00 EDT         10 Chance Rain Showers
-#> 2 2025-03-29 21:00:00 EDT         10 Chance Rain Showers
-#> 3 2025-03-29 22:00:00 EDT          9 Chance Rain Showers
-#> 4 2025-03-29 23:00:00 EDT          9 Chance Rain Showers
-#> 5 2025-03-30 00:00:00 EDT          8 Chance Rain Showers
-#> 6 2025-03-30 01:00:00 EDT          8 Chance Rain Showers
+#>                      time wind_speed                            skies
+#> 1 2025-03-31 17:00:00 EDT          9 Chance Showers And Thunderstorms
+#> 2 2025-03-31 18:00:00 EDT          9 Showers And Thunderstorms Likely
+#> 3 2025-03-31 19:00:00 EDT          8 Showers And Thunderstorms Likely
+#> 4 2025-03-31 20:00:00 EDT          8        Showers And Thunderstorms
+#> 5 2025-03-31 21:00:00 EDT          8        Showers And Thunderstorms
+#> 6 2025-03-31 22:00:00 EDT          7        Showers And Thunderstorms
 ```
 
 ``` r
@@ -150,10 +150,7 @@ station_forecast(station_id = "KNYC") %>%
 # We can easily put this result into a GT table for easy viewing
 ```
 
-<figure>
-<img src="my_table.png" alt="my_table" />
-<figcaption aria-hidden="true">my_table</figcaption>
-</figure>
+\<~– ![my_table](my_table.png) –\>
 
 ## Finding NWS ASOS/AWOS Stations Near a Point
 

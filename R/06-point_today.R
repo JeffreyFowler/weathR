@@ -13,36 +13,11 @@
 #'
 #' @examples
 #' # Produce a GT summary of the weather thus far for a given lat/lon
-#' \dontrun{
-#' install.packages("gt")
-#' library(gt)
-#' install.packages("snakecase")
-#' library(snakecase)
-#'
+#' \donttest{
 #' point_today(lat = 33, lon = -80) %>%
 #' as.data.frame() %>%
 #'  dplyr::mutate(time = as.POSIXct(time) %>% format("%H:%M")) %>%
-#'   dplyr::select(time, temp, dewpoint, humidity, wind_speed) %>%
-#'   gt::gt() %>%
-#'   gt::tab_header(title = "Weather at latitude 33, longitude -80 for today") %>%
-#'   gt::tab_style(
-#'     style = gt::cell_borders(
-#'       sides = "right",
-#'       color = "lightgray",
-#'       style = "dashed",
-#'       weight = px(1)
-#'       ),
-#'       locations = cells_body(columns = everything())
-#'     ) %>%
-#'    gt::tab_style(
-#'     style = gt::cell_text(align = "center"),
-#'      locations = gt::cells_column_labels(columns = everything())
-#'    ) %>%
-#'    gt::tab_style(
-#'     style = gt::cell_borders(sides = "right", color = "lightgray", weight = px(2)),
-#'     locations = gt::cells_body(columns = 1)
-#'     ) %>%
-#'     gt::cols_label_with(fn = ~ snakecase::to_title_case(.x))
+#'   dplyr::select(time, temp, dewpoint, humidity, wind_speed)
 #'  }
 point_today <- function(lat, lon, timezone = -1, dir_numeric = FALSE){
 

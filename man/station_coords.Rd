@@ -16,10 +16,7 @@ Named list with latitude and longitude like: \code{c("lat" = x, "lon" = y)}.
 Station Coordinates
 }
 \examples{
-\dontrun{
-station_coords("KBOS") \%>\%
-  data.frame(lat = .[["lat"]], lon = .[["lon"]]) \%>\%
-  select(lat, lon) \%>\%
-  st_as_sf(coords = c("lon", "lat"), crs = 4326)
+\donttest{
+station_coords("KBOS")
 }
 }

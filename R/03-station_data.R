@@ -36,11 +36,8 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' station_coords("KBOS") %>%
-#'   data.frame(lat = .[["lat"]], lon = .[["lon"]]) %>%
-#'   select(lat, lon) %>%
-#'   st_as_sf(coords = c("lon", "lat"), crs = 4326)
+#' \donttest{
+#' station_coords("KBOS")
 #' }
 station_coords <- function(station_id){
 
@@ -65,12 +62,8 @@ station_coords <- function(station_id){
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' install.packages("tmap")
-#' library(tmap)
-#'
-#' tmap_mode("view")
-#' station_point("KDEN") %>% tm_shape() + tm_dots(size = .1)
+#' \donttest{
+#' station_point("KDEN")
 #' }
 station_point <- function(station_id){
 
