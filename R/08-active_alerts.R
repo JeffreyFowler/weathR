@@ -27,9 +27,9 @@ safe_collapse <- function(x){
 #' @importFrom httr2 resp_body_json
 #'
 #' @examples
-#' # Get all the red flag warnings
-#' red_flags <- alerts()
-#' red_flags <- filter(red_flags, grepl("red flag", red_flags$headline, ignore.case = TRUE))
+#' donttest{
+#' alerts()
+#' }
 alerts <- function(){
 
   #Signal that httr2::resp_body_json uses jsonlite dependency to avoid a warning
