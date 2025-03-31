@@ -27,7 +27,7 @@ safe_collapse <- function(x){
 #' @importFrom httr2 resp_body_json
 #'
 #' @examples
-#' donttest{
+#' \donttest{
 #' alerts()
 #' }
 alerts <- function(){

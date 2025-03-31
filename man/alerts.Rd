@@ -13,7 +13,7 @@ Dataframe containing various columns identifying and describing alerts.
 National Weather Service Alerts
 }
 \examples{
-# Get all the red flag warnings
-red_flags <- alerts()
-red_flags <- filter(red_flags, grepl("red flag", red_flags$headline, ignore.case = TRUE))
+\donttest{
+alerts()
+}
 }
