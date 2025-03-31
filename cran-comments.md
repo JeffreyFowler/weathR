@@ -2,4 +2,4 @@
 
 0 errors | 0 warnings | 0 notes
 
-* I have amended my examples as requested in my previous submission. Please note, because this package interacts with a web-based REST API, there may be variance in the elapsed time of examples. In my experience, elapsed time is usually under 5 seconds for all examples, but infrequently runs over. There are no citations in my package description. Thank you for your help!
+* In this resubmission, I have amended my examples as per the feedback provided by Beni Altmann on 3/29/2025. I hope the results will be satisafactory. I will note, because this package is a wrapper for a REST-API, the time to complete examples varies due to rate limiting and network connectivity. I have had checks of identical code which complete all examples in time-elapsed < 5 seconds, and checks with time elapsed > 5 seconds.
